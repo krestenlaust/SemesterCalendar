@@ -1,19 +1,20 @@
-function populate_calendar(table_element) {
-    const months = [
-        month_day_generator(8),
-        month_day_generator(9),
-        month_day_generator(10),
-        month_day_generator(11),
-        month_day_generator(0),
-    ]
+const calendar = {
+    
+}
 
+function populate_calendar(table_element) {
     // Generate days in table
+
 }
 
 /**
  *
+ * @param day One-indexed day.
  * @param month Zero-indexed month.
- * @returns {Generator<*, void, *>}
+ * @param year One-indexed year (i think).
  */
-function *month_day_generator(month){
+function get_day_events(day, month, year){
+    let firstDay = new Date(year, month, day)
+
+
 }
