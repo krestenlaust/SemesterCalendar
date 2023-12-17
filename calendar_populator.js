@@ -9,7 +9,9 @@ const events = {
 function populate_calendar(table_element) {
     // Generate days in table
 
-    table_element.appendChild(generate_table_row())
+    for (let i = 1; i <= 30; i++) {
+        table_element.appendChild(generate_table_row(i))        
+    }
 }
 
 /**
@@ -26,14 +28,17 @@ function get_day_events(day, month, year){
 
 /**
  * 
+ * @param {Number} day
  * @returns {HTMLTableRowElement}
  */
-function generate_table_row(){
+function generate_table_row(day){
     const tablerowelem = document.createElement("tr");
 
-    const tabledataelem = document.createElement("td");
-    tabledataelem.appendChild(generate_table_cell("F", 1, []));
-    tablerowelem.appendChild(tabledataelem);
+    for (let i = 0; i < 5; i++) {
+        const tabledataelem = document.createElement("td");
+        tabledataelem.appendChild(generate_table_cell("F", day, []));
+        tablerowelem.appendChild(tabledataelem);
+    }
 
     return tablerowelem;
 }
