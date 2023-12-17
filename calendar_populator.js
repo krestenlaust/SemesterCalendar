@@ -54,15 +54,17 @@ function generate_table_cell(weekday, day, events){
     const celldiv = document.createElement("div");
     celldiv.className = "day";
 
-    const weekdayelem = document.createElement("span");
+    const weekdayelem = document.createElement("div");
     weekdayelem.innerText = weekday
     celldiv.appendChild(weekdayelem);
 
-    const daynumberelem = document.createElement("span");
+    const daynumberelem = document.createElement("div");
     daynumberelem.innerText = day;
     celldiv.appendChild(daynumberelem);
 
     // Add events as well.
+    const descelem = document.createElement("div");
+    celldiv.appendChild(descelem);
 
     return celldiv;
 }
