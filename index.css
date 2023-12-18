@@ -29,30 +29,22 @@ td {
     height: 8mm; /* Adjust as needed */
 }
 
-div.day {
+#calendar > tr > td {
+}
+
+.day-daynumber, .day-weekday {
+    width: 3%;
+}
+
+.day {
     margin: 0;
     padding: 0;
     height: 100%;
 }
 
-div.day > div {
-    border:1px solid black;
-    height: 100%;
-}
-
-div.day > div:nth-child(1) {
-    float: left;
-    width: 30%;
-}
-
-div.day > div:nth-child(2) {
-    display: inline-block;
-    width: 30%;
-}
-
-div.day > div:nth-child(3) {
-    float: right;
-    width: 39%;
+.day > td {
+    border-bottom-width: 0;
+    border-top-width: 0;
 }
 
 @page
@@ -68,5 +60,9 @@ div.day > div:nth-child(3) {
 
       width: 100%; /* Full width for printing */
       height: 100%;
-    }  
+    }
+
+    table {
+        border-collapse: collapse;
+    }
   }

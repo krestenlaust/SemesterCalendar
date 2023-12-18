@@ -23,7 +23,6 @@ function populate_calendar(table_element) {
 function get_day_events(day, month, year){
     let firstDay = new Date(year, month, day)
 
-
 }
 
 /**
@@ -48,25 +47,27 @@ function generate_table_row(day){
  * @param {String} weekday
  * @param {Number} day
  * @param {Array} events
- * @returns {HTMLDivElement}
+ * @returns {HTMLTableElement}
  */
 function generate_table_cell(weekday, day, events){
-    const celldiv = document.createElement("div");
-    celldiv.className = "day";
-
-    const weekdayelem = document.createElement("div");
+    const tableelem = document.createElement("table");
+    tableelem.className = "day";
+    
+    const weekdayelem = document.createElement("td");
     weekdayelem.innerText = weekday
-    celldiv.appendChild(weekdayelem);
+    weekdayelem.className = "day-weekday";
+    tableelem.appendChild(weekdayelem);
 
-    const daynumberelem = document.createElement("div");
+    const daynumberelem = document.createElement("td");
     daynumberelem.innerText = day;
-    celldiv.appendChild(daynumberelem);
+    daynumberelem.className = "day-daynumber";
+    tableelem.appendChild(daynumberelem);
 
     // Add events as well.
-    const descelem = document.createElement("div");
-    celldiv.appendChild(descelem);
+    const descelem = document.createElement("td");
+    tableelem.appendChild(descelem);
 
-    return celldiv;
+    return tableelem;
 }
 
 populate_calendar(calendar)
