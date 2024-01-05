@@ -3,7 +3,7 @@ const events = {
     "2024-03-01": ["Event 1", "Event 2"],
 }
 
-const startMonth = 1; // February
+const startMonth = 1; // February, 0-indexed.
 const year = 2024;
 
 /**
@@ -13,22 +13,22 @@ const year = 2024;
 function populate_calendar(table_element) {
     // Generate days in table
 
-    for (let i = 1; i <= 30; i++) {
+    for (let i = 1; i <= 31; i++) {
         table_element.appendChild(generate_table_row(i))
     }
 }
 
 /**
  * 
- * @param {Number} day
+ * @param {Number} dayIndex Index starting at 1.
  * @returns {HTMLTableRowElement}
  */
-function generate_table_row(day) {
+function generate_table_row(dayIndex) {
     const tablerowelem = document.createElement("tr");
 
     for (let i = 0; i < 5; i++) {
         const tabledataelem = document.createElement("td");
-        const currentDate = new Date(year, startMonth + i, day);
+        const currentDate = new Date(year, startMonth + i, dayIndex);
         tabledataelem.appendChild(generate_table_cell(currentDate));
         tablerowelem.appendChild(tabledataelem);
     }
