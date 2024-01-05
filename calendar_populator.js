@@ -27,7 +27,7 @@ function generate_table_row(day) {
 
     for (let i = 0; i < 5; i++) {
         const tabledataelem = document.createElement("td");
-        const currentDate = new Date(year, 1, day); // Assuming February as the start month (index 1)
+        const currentDate = new Date(year, 1 + i, day); // Assuming February as the start month (index 1)
         tabledataelem.appendChild(generate_table_cell(currentDate));
         tablerowelem.appendChild(tabledataelem);
     }
