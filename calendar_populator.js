@@ -3,6 +3,7 @@ const events = {
     "2024-03-01": ["Event 1", "Event 2"],
 }
 
+const startMonth = 1; // February
 const year = 2024;
 
 /**
@@ -27,7 +28,7 @@ function generate_table_row(day) {
 
     for (let i = 0; i < 5; i++) {
         const tabledataelem = document.createElement("td");
-        const currentDate = new Date(year, 1 + i, day); // Assuming February as the start month (index 1)
+        const currentDate = new Date(year, startMonth + i, day);
         tabledataelem.appendChild(generate_table_cell(currentDate));
         tablerowelem.appendChild(tabledataelem);
     }
