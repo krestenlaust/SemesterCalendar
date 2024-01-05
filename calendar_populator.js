@@ -46,8 +46,14 @@ function generate_table_cell(currentDate) {
     tableelem.className = "day";
 
     const weekdayelem = document.createElement("td");
-    weekdayelem.innerText = getWeekday(currentDate.getDay());
-    weekdayelem.className = "day-weekday";
+    const weekday_index = currentDate.getDay();
+    weekdayelem.innerText = get_weekday_symbol(weekday_index);
+    weekdayelem.classList.add("day-weekday");
+
+    if (is_weekend(weekday_index)) {
+        tableelem.classList.add("day-weekend");
+    }
+
     tableelem.appendChild(weekdayelem);
 
     const daynumberelem = document.createElement("td");
@@ -82,12 +88,21 @@ function get_day_events(day, month, year) {
 
 /**
  * 
- * @param {Number} dayIndex
- * @returns {String} Weekday name
+ * @param {Number} dayIndex Zero-indexed.
+ * @returns {String} Symbol representing the weekday.
  */
-function getWeekday(dayIndex) {
+function get_weekday_symbol(dayIndex) {
     const weekdays = ["S", "M", "T", "O", "T", "F", "L"];
     return weekdays[dayIndex];
+}
+
+/**
+ * 
+ * @param {Number} dayIndex Zero-indexed. 
+ * @returns {Boolean} Whether the day is part of the weekend.
+ */
+function is_weekend(dayIndex) {
+    return dayIndex == 0 || dayIndex == 6;
 }
 
 populate_calendar(calendar)

@@ -5,11 +5,14 @@ body {
     width: 420mm;
     height: 297mm;
     margin: 10mm;
+
+    background-color: lightgray;
 }
 
 table {
     border-collapse: collapse;
     width: 100%;
+    background-color: white;
 }
 
 th, td {
@@ -33,6 +36,10 @@ td {
 
 .day-daynumber, .day-weekday {
     width: 8mm;
+}
+
+.day-weekend {
+    background-color: lightgray;
 }
 
 .day {
