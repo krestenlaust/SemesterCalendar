@@ -1,6 +1,7 @@
 const events = {
     "2024-02-14": ["Valentine's Day"],
-    "2024-03-01": ["Event 1", "Event 2"],
+    "2024-02-10": ["Kalender deadline"],
+    "2024-03-10": ["Event 1", "Event 2"],
 }
 
 const startMonth = 1; // February, 0-indexed.
@@ -63,9 +64,9 @@ function generate_table_cell(currentDate) {
 
     // Add events
     const descelem = document.createElement("td");
-    const eventsForDay = get_day_events(currentDate.getDate(), currentDate.getMonth(), currentDate.getFullYear());
+    const eventsForDay = get_day_events(currentDate);
     eventsForDay.forEach(event => {
-        const eventelem = document.createElement("div");
+        const eventelem = document.createElement("span");
         eventelem.innerText = event;
         descelem.appendChild(eventelem);
     });
@@ -76,13 +77,11 @@ function generate_table_cell(currentDate) {
 
 /**
  * 
- * @param {Number} day One-indexed day.
- * @param {Number} month Zero-indexed month.
- * @param {Number} year Four-digit year.
+ * @param {Date} date The date of the event.
  * @returns {Array}
  */
-function get_day_events(day, month, year) {
-    const key = `${year}-${month + 1}-${day}`; // Months are zero-indexed in JavaScript
+function get_day_events(date) {
+    const key = date.toISOString().substring(0, 10);
     return events[key] || [];
 }
 
