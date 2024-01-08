@@ -64,6 +64,14 @@ th {
     height: 100%;
 }
 
+.subclub-logo {
+    width: 10%;
+}
+
+.subclub-resp {
+    width: 20%;
+}
+
 @page
 {
     size: a3;
