@@ -6,6 +6,8 @@ const events = {
     "2024-03-10": [{name: "Event 1"}, {name: "Event 2"}],
 }
 
+const resource_root = "resources/";
+
 const startMonth = 1; // February, 0-indexed.
 const year = 2024;
 
@@ -65,14 +67,25 @@ function generate_table_cell(currentDate) {
     tableelem.appendChild(daynumberelem);
 
     // Add events
-    const descelem = document.createElement("td");
+    const date_elem = document.createElement("td");
     const eventsForDay = get_day_events(currentDate);
     eventsForDay.forEach(event => {
-        const eventelem = document.createElement("span");
-        eventelem.innerText = event.name;
-        descelem.appendChild(eventelem);
+        const event_elem = document.createElement("div");
+
+        if (event.hasOwnProperty("logo")){
+            const logo_elem = document.createElement("img");
+            logo_elem.classList.add("subclub-logo-img");
+            logo_elem.src = resource_root.split("/").concat(event.logo).join("/");
+            event_elem.appendChild(logo_elem);
+        }
+
+        const desc_elem = document.createElement("span");
+        desc_elem.innerText = event.name;
+        event_elem.appendChild(desc_elem);
+
+        date_elem.appendChild(event_elem);
     });
-    tableelem.appendChild(descelem);
+    tableelem.appendChild(date_elem);
 
     return tableelem;
 }
