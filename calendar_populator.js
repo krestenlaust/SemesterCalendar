@@ -1,7 +1,9 @@
 const events = {
-    "2024-02-14": ["Valentine's Day"],
-    "2024-02-10": ["Kalender deadline"],
-    "2024-03-10": ["Event 1", "Event 2"],
+    "2024-02-14": [{name: "Valentine's Day"}],
+    "2024-03-15": [{name: "F-dag", logo: "initiv.svg"}],
+    "2024-04-05": [{name: "F-easter", logo: "initiv.svg"}],
+    "2024-02-10": [{name: "Kalender deadline"}],
+    "2024-03-10": [{name: "Event 1"}, {name: "Event 2"}],
 }
 
 const startMonth = 1; // February, 0-indexed.
@@ -67,7 +69,7 @@ function generate_table_cell(currentDate) {
     const eventsForDay = get_day_events(currentDate);
     eventsForDay.forEach(event => {
         const eventelem = document.createElement("span");
-        eventelem.innerText = event;
+        eventelem.innerText = event.name;
         descelem.appendChild(eventelem);
     });
     tableelem.appendChild(descelem);
