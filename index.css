@@ -90,8 +90,13 @@ th {
 }
 
 .subclub-logo-img {
-    width: 1cm;
-    height: 1cm;
+    width: 8mm;
+    height: 8mm;
+}
+
+.subclub-logo-img-display {
+    width: 1.5cm !important;
+    height: 1.5cm !important;
 }
 
 .subclub-resp {
@@ -102,6 +107,7 @@ div.subclub-event {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
 }
 
 @page
