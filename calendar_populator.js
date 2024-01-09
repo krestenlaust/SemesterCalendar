@@ -113,8 +113,16 @@ function generate_table_cell(currentDate) {
  */
 function get_day_events(date) {
     date.setDate(date.getDate() + 1); // Add one to the date because there's an off-by-one error somewhere.
-    const key = date.toISOString().substring(0, 10);
+    const key = get_iso_date(date);
     return events[key] || [];
+}
+
+/**
+ * @param {Date} date
+ * @returns {String} ISO-formatted date.
+ */
+function get_iso_date(date) {
+    return date.toISOString().substring(0, 10);
 }
 
 /**
