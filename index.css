@@ -48,6 +48,7 @@ td {
 
 th {
     background-color: #f2f2f2;
+    font-size: 2em;
 }
 
 #calendar td {
@@ -74,7 +75,7 @@ th {
     font-size: 1em;
 }
 
-.day-weekend {
+.day-weekend, td:has(table.day-weekend) {
     background-color: lightgray;
 }
 
@@ -82,6 +83,10 @@ th {
     margin: 0;
     padding: 0;
     height: 100%;
+}
+
+td:has(table.day) {
+    border-width: 1px;
 }
 
 .day > td {
@@ -106,8 +111,8 @@ th {
 }
 
 img.club-logo {
-    width: 5cm;
-    height: 5cm;
+    width: 4cm;
+    height: 4cm;
 }
 
 .subclub-logo-img-display {
