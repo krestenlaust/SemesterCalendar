@@ -52,7 +52,12 @@ th {
 
 #calendar td {
     padding: 0;
-    height: 8mm; /* Adjust as needed */
+    height: 100%;
+    vertical-align: middle;
+}
+
+#calendar > tr {
+    height: 8mm;
 }
 
 #calendar > tr > td {
@@ -62,6 +67,11 @@ th {
 
 .day-daynumber, .day-weekday {
     width: 8mm;
+}
+
+.day-events {
+    display: flex;
+    font-size: 1em;
 }
 
 .day-weekend {
@@ -108,6 +118,7 @@ div.subclub-event {
     align-items: center;
     justify-content: center;
     height: 100%;
+    flex: 100%;
 }
 
 @page

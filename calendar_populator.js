@@ -83,6 +83,8 @@ function generate_table_cell(currentDate) {
 
     // Add events
     const date_elem = document.createElement("td");
+    date_elem.classList.add("day-events");
+
     const eventsForDay = get_day_events(currentDate);
     eventsForDay.forEach(event => {
         const event_elem = document.createElement("div");
