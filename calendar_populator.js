@@ -48,8 +48,13 @@ function generate_table_row(dayIndex) {
 
     for (let i = 0; i < 5; i++) {
         const tabledataelem = document.createElement("td");
+
         const currentDate = new Date(year, startMonth + i, dayIndex);
-        tabledataelem.appendChild(generate_table_cell(currentDate));
+        // If the date isn't correct, it's because it's wrapped into the next month.
+        if (currentDate.getDate() == dayIndex) {
+            tabledataelem.appendChild(generate_table_cell(currentDate));
+        }
+
         tablerowelem.appendChild(tabledataelem);
     }
 
