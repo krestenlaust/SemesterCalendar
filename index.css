@@ -104,6 +104,11 @@ th {
     height: 8mm;
 }
 
+img.club-logo {
+    width: 5cm;
+    height: 5cm;
+}
+
 .subclub-logo-img-display {
     width: 1.5cm !important;
     height: 1.5cm !important;
