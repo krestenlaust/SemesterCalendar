@@ -98,6 +98,12 @@ th {
     width: 20%;
 }
 
+div.subclub-event {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @page
 {
     size: a3;

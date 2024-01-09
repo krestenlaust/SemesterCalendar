@@ -86,6 +86,7 @@ function generate_table_cell(currentDate) {
     const eventsForDay = get_day_events(currentDate);
     eventsForDay.forEach(event => {
         const event_elem = document.createElement("div");
+        event_elem.classList.add("subclub-event");
 
         if (event.hasOwnProperty("logo")){
             const logo_elem = document.createElement("img");
