@@ -3,7 +3,22 @@ const events = {
     "2024-03-15": [{name: "F-dag", logo: "initiv.svg"}],
     "2024-04-05": [{name: "F-easter", logo: "initiv.svg"}],
     "2024-02-10": [{name: "Kalender deadline"}],
-    "2024-03-10": [{name: "Event 1"}, {name: "Event 2"}],
+
+    "2024-02-29": [{name: "Facking v5.0: Må den bedste editor VIMme", logo: "fit.svg"}],
+
+    "2024-02-08": [{name: "Fkult: Planlaegning", logo: "flogo.svg"}],
+    "2024-02-22": [{name: "Fkult: Film tema 1", logo: "flogo.svg"}],
+    "2024-03-07": [{name: "Fkult: Film tema 2", logo: "flogo.svg"}],
+    "2024-03-21": [{name: "Fkult: Film tema 3", logo: "flogo.svg"}],
+    "2024-04-04": [{name: "Fkult: Film tema 4", logo: "flogo.svg"}, {name: "Facking v5.5: Standard Issue", logo: "fit.svg"}],
+    "2024-04-18": [{name: "Fkult: Film tema 5", logo: "flogo.svg"}],
+    "2024-05-02": [{name: "Fkult: Film tema 6", logo: "flogo.svg"}],
+    "2024-05-16": [{name: "Fkult: Film tema 7", logo: "flogo.svg"}],
+    "2024-05-30": [{name: "Fkult: Film tema 8", logo: "flogo.svg"}],
+
+    "2024-04-05": [{name: "FLAN 1. Dag", logo: "flogo.svg"}],
+    "2024-04-06": [{name: "FLAN 2. Dag", logo: "flogo.svg"}],
+    "2024-04-07": [{name: "FLAN 3. Dag", logo: "flogo.svg"}],
 }
 
 const resource_root = "resources/";
@@ -96,6 +111,7 @@ function generate_table_cell(currentDate) {
  * @returns {Array}
  */
 function get_day_events(date) {
+    date.setDate(date.getDate() + 1); // Add one to the date because there's an off-by-one error somewhere.
     const key = date.toISOString().substring(0, 10);
     return events[key] || [];
 }
