@@ -18,9 +18,10 @@ const events = {
     "2024-05-16": [{name: "Film tema 7", logo: "fkult.webp"}],
     "2024-05-30": [{name: "Film tema 8", logo: "fkult.webp"}],
 
-    "2024-04-05": [{name: "FLAN 1. Dag", logo: "flan.webp"}],
-    "2024-04-06": [{name: "FLAN 2. Dag", logo: "flan.webp"}],
-    "2024-04-07": [{name: "FLAN 3. Dag", logo: "flan.webp"}],
+    "2024-04-05": [{name: "Feaster", logo: "initiv.svg"}],
+    "2024-04-12": [{name: "FLAN 1. Dag", logo: "flan.webp"}],
+    "2024-04-13": [{name: "FLAN 2. Dag", logo: "flan.webp"}],
+    "2024-04-14": [{name: "FLAN 3. Dag", logo: "flan.webp"}],
 }
 
 const resource_root = "resources/";
