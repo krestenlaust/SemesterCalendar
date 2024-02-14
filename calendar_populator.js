@@ -1,27 +1,33 @@
 const events = {
-    "2024-02-01": [{name: "Semesterstart"}],
-    "2024-02-14": [{name: "Valentine's dag"}],
+    "2024-02-01": [{name: "=Semesterstart="}],
+    "2024-02-14": [{name: "Valentines dag"}],
     "2024-03-15": [{name: "F-dag", logo: "initiv.svg"}],
     "2024-04-05": [{name: "F-easter", logo: "initiv.svg"}],
     "2024-02-10": [{name: "Kalender deadline"}],
-    "2024-02-16": [{name: "Tour de Fredagsbar feat. Topholt", logo: "flogo.svg"}],
+    "2024-02-02": [{name: "Tour de Fredagsbar m. Topholt", logo: "flogo.svg"}],
+    "2024-02-16": [{name: "Foobar m. Norlys Energy Trading", logo: "flogo.svg"}],
+    "2024-02-21": [{name: "‎ Brætspilsaften", logo: "adsl.png"}],
 
     "2024-02-29": [{name: "Facking v5.0: Må den bedste editor VIMme", logo: "fit.svg"}],
+    "2024-04-11": [{name: "Facking v5.5: Standard Issue", logo: "fit.svg"}],
+    "2024-03-18": [{name: "=Kalenderen opdateres="}],
 
-    "2024-02-08": [{name: "Fkult - Filmafstemning", logo: "fkult.webp"}],
-    "2024-02-22": [{name: "Film tema 1", logo: "fkult.webp"}],
-    "2024-03-07": [{name: "Film tema 2", logo: "fkult.webp"}],
-    "2024-03-21": [{name: "Film tema 3", logo: "fkult.webp"}],
-    "2024-04-04": [{name: "Film tema 4", logo: "fkult.webp"}, {name: "Facking v5.5: Standard Issue", logo: "fit.svg"}],
-    "2024-04-18": [{name: "Film tema 5", logo: "fkult.webp"}],
-    "2024-05-02": [{name: "Film tema 6", logo: "fkult.webp"}],
-    "2024-05-16": [{name: "Film tema 7", logo: "fkult.webp"}],
-    "2024-05-30": [{name: "Film tema 8", logo: "fkult.webp"}],
+    "2024-02-08": [{name: "Filmafstemning", logo: "fkult.webp"}],
+    "2024-02-22": [{name: "Dice 'n Drinks", logo: "fixd.png"}, {name: "Hüttels favoritter", logo: "fkult.webp"}],
+    "2024-03-07": [{name: "Badaptations 2: Mediocre Boogaloo", logo: "fkult.webp"}],
+    "2024-03-21": [{name: "Donanering og dets konsekvenser", logo: "fkult.webp"}],
+    "2024-04-04": [{name: "Star Wars maraton, men Google har oversat den for mange gange", logo: "fkult.webp"}],
+    "2024-04-18": [{name: "Tim Currys campy syretrip i en spooky villa", logo: "fkult.webp"}],
+    "2024-05-02": [{name: "Weird indie gysere som indeholder virkelig mange mænd som laver...", logo: "fkult.webp"}],
+    "2024-05-16": [{name: "Retro-resurrektion og rollespil romantik", logo: "fkult.webp"}],
 
     "2024-04-05": [{name: "Feaster", logo: "initiv.svg"}],
-    "2024-04-12": [{name: "FLAN 1. Dag", logo: "flan.webp"}],
-    "2024-04-13": [{name: "FLAN 2. Dag", logo: "flan.webp"}],
-    "2024-04-14": [{name: "FLAN 3. Dag", logo: "flan.webp"}],
+    "2024-04-12": [{name: "FLAN 6765.0", logo: "flan.webp"}],
+    "2024-04-13": [{name: "FLAN 6765.0", logo: "flan.webp"}],
+    "2024-04-14": [{name: "FLAN 6765.0", logo: "flan.webp"}],
+
+    "2024-05-03": [{name: "F-sportsdag", logo: "initiv.svg"}],
+    "2024-05-29": [{name: "=Projektdeadline="}]
 }
 
 const resource_root = "resources/";
