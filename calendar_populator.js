@@ -6,7 +6,9 @@ const events = {
     "2024-02-10": [{name: "Kalender deadline"}],
     "2024-02-02": [{name: "Tour de Fredagsbar m. Topholt", logo: "flogo.svg"}],
     "2024-02-16": [{name: "Foobar m. Norlys Energy Trading", logo: "flogo.svg"}],
-    "2024-02-21": [{name: "‎ Brætspilsaften", logo: "adsl.png"}],
+    "2024-02-21": [{name: "‎ Brætspilsaften m. Prosa", logo: "adsl.png"}],
+    "2024-03-20": [{name: "‎ Brætspilsaften m. IT-day", logo: "adsl.png"}],
+    "2024-04-17": [{name: "‎ Brætspilsaften", logo: "adsl.png"}],
 
     "2024-02-29": [{name: "Facking v5.0: Må den bedste editor VIMme", logo: "fit.svg"}],
     "2024-04-11": [{name: "Facking v5.5: Standard Issue", logo: "fit.svg"}],
@@ -27,7 +29,8 @@ const events = {
     "2024-04-14": [{name: "FLAN 6765.0", logo: "flan.webp"}],
 
     "2024-05-03": [{name: "F-sportsdag", logo: "initiv.svg"}],
-    "2024-05-29": [{name: "=Projektdeadline="}]
+    "2024-05-29": [{name: "=Projektdeadline="}],
+    "2024-05-31": [{name: "Universitetsfesten 2024 - 50 års jubilæum"}]
 }
 
 const resource_root = "resources/";
