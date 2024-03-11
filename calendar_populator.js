@@ -1,9 +1,7 @@
 const events = {
     "2024-02-01": [{name: "=Semesterstart="}],
-    "2024-02-14": [{name: "Valentines dag"}],
-    "2024-03-15": [{name: "F-dag", logo: "initiv.svg"}],
-    "2024-04-05": [{name: "F-easter", logo: "initiv.svg"}],
-    "2024-02-10": [{name: "Kalender deadline"}],
+    "2024-03-22": [{name: "F-dag", logo: "initiv.svg"}],
+    "2024-04-19": [{name: "F-easter", logo: "initiv.svg"}],
     "2024-02-02": [{name: "Tour de Fredagsbar m. Topholt", logo: "flogo.svg"}],
     "2024-02-16": [{name: "Foobar m. Norlys Energy Trading", logo: "flogo.svg"}],
     "2024-02-21": [{name: "‎ Brætspilsaften m. Prosa", logo: "adsl.png"}],
@@ -12,7 +10,9 @@ const events = {
 
     "2024-02-29": [{name: "Facking v5.0: Må den bedste editor VIMme", logo: "fit.svg"}],
     "2024-04-11": [{name: "Facking v5.5: Standard Issue", logo: "fit.svg"}],
-    "2024-03-18": [{name: "=Kalenderen opdateres="}],
+    "2024-03-18": [{name: "=Kalenderen er opdateret="}],
+    "2024-04-22": [{name: "=Kalenderen opdateres="}],
+    "2024-02-26": [{name: "FADASE: LaTeX kursus med Victor"}],
 
     "2024-02-08": [{name: "Filmafstemning", logo: "fkult.webp"}],
     "2024-02-22": [{name: "Dice 'n Drinks", logo: "fixd.png"}, {name: "Hüttels favoritter", logo: "fkult.webp"}],
@@ -27,6 +27,10 @@ const events = {
     "2024-04-12": [{name: "FLAN 6765.0", logo: "flan.webp"}],
     "2024-04-13": [{name: "FLAN 6765.0", logo: "flan.webp"}],
     "2024-04-14": [{name: "FLAN 6765.0", logo: "flan.webp"}],
+
+    "2024-03-29": [{name: "Create Jam Spring 2024", logo: "createjam.png"}],
+    "2024-03-30": [{name: "Create Jam Spring 2024", logo: "createjam.png"}],
+    "2024-03-31": [{name: "Create Jam Spring 2024", logo: "createjam.png"}],
 
     "2024-05-03": [{name: "F-sportsdag", logo: "initiv.svg"}],
     "2024-05-29": [{name: "=Projektdeadline="}],
