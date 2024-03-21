@@ -1,7 +1,6 @@
 const events = {
     "2024-02-01": [{name: "=Semesterstart="}],
     "2024-03-22": [{name: "F-dag", logo: "initiv.svg"}],
-    "2024-04-19": [{name: "F-easter", logo: "initiv.svg"}],
     "2024-02-02": [{name: "Tour de Fredagsbar m. Topholt", logo: "flogo.svg"}],
     "2024-02-16": [{name: "Foobar m. Norlys Energy Trading", logo: "flogo.svg"}],
     "2024-02-21": [{name: "‎ Brætspilsaften m. Prosa", logo: "adsl.png"}],
@@ -12,8 +11,11 @@ const events = {
     "2024-04-11": [{name: "Facking v5.5: Standard Issue", logo: "fit.svg"}],
     "2024-03-18": [{name: "=Kalenderen er opdateret="}],
     "2024-04-22": [{name: "=Kalenderen opdateres="}],
-    "2024-02-26": [{name: "FADASE: LaTeX kursus med Victor"}],
+    "2024-02-26": [{name: "LaTeX kursus med Victor", logo: "fadase.jpg"}],
+    "2024-03-27": [{name: "AI og Graph databaser med supercomputere", logo: "asck.png"}],
+    "2024-04-10": [{name: "ConnectIT - Messe"}],
 
+    "2024-04-27": [{name: "Tema-fest", logo: "fixd.png"}],
     "2024-02-08": [{name: "Filmafstemning", logo: "fkult.webp"}],
     "2024-02-22": [{name: "Dice 'n Drinks", logo: "fixd.png"}, {name: "Hüttels favoritter", logo: "fkult.webp"}],
     "2024-03-07": [{name: "Badaptations 2: Mediocre Boogaloo", logo: "fkult.webp"}],
@@ -23,7 +25,7 @@ const events = {
     "2024-05-02": [{name: "Weird indie gysere som indeholder virkelig mange mænd som laver...", logo: "fkult.webp"}],
     "2024-05-16": [{name: "Retro-resurrektion og rollespil romantik", logo: "fkult.webp"}],
 
-    "2024-04-05": [{name: "Feaster", logo: "initiv.svg"}],
+    "2024-04-26": [{name: "Feaster", logo: "initiv.svg"}],
     "2024-04-12": [{name: "FLAN 6765.0", logo: "flan.webp"}],
     "2024-04-13": [{name: "FLAN 6765.0", logo: "flan.webp"}],
     "2024-04-14": [{name: "FLAN 6765.0", logo: "flan.webp"}],
@@ -32,8 +34,12 @@ const events = {
     "2024-03-30": [{name: "Create Jam Spring 2024", logo: "createjam.png"}],
     "2024-03-31": [{name: "Create Jam Spring 2024", logo: "createjam.png"}],
 
+    "2024-04-19": [{name: "Datalogi/DVML Hyttetur"}],
+    "2024-04-20": [{name: "Datalogi/DVML Hyttetur"}],
+    "2024-04-21": [{name: "Datalogi/DVML Hyttetur"}],
+
     "2024-05-03": [{name: "F-sportsdag", logo: "initiv.svg"}],
-    "2024-05-29": [{name: "=Projektdeadline="}],
+    "2024-05-29": [{name: "Projektafleverings deadline"}],
     "2024-05-31": [{name: "Universitetsfesten 2024 - 50 års jubilæum"}]
 }
 
