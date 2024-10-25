@@ -1,86 +1,50 @@
-<!--https://wkhtmltopdf.org/-->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="index.css" rel="stylesheet" type="text/css" media="print">
-    <link href="index.css" rel="stylesheet" type="text/css">
-    <title>Semester Calendar</title>
+<html lang="da">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Semester Calendar</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div class="calendar-body">
-        <main>
-            <table id="calendar">
-                <tr>
-                    <th>Februar</th>
-                    <th>Marts</th>
-                    <th>April</th>
-                    <th>Maj</th>
-                    <th>Juni</th>
-                </tr>
-            </table>
-        </main>
-        <footer>
-            <table id="info">
-                <tr>
-                    <td class="info-cell" style="width: 60%;height: 100%;padding: 0;">
-                        <table style="width: 100%;height: 100%;">
-                            <tr>
-                                <td style="width: 20%">
-                                    <img class="club-logo" src="resources/flogo.svg">
-                                    <p>For tilmelding til F-klubben, henvend dig i Jægerstuen (Klynge 2) eller på fklub.dk</p>
-                                </td>
-                                <td style="width: 40%">
-                                    <div class="club-subclub-table">
-                                        <table>
-                                            <tr>
-                                                <td class="subclub-logo"><img class="subclub-logo-img subclub-logo-img-display" src="resources/fkult.webp"></td>
-                                                <td class="subclub-desc">FKult - F-Klubbens Kultur-udvalg</td>
-                                                <td class="subclub-resp">person 2 (pers2@student.aau.dk)</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="subclub-logo"><img class="subclub-logo-img subclub-logo-img-display" src="resources/fit.svg"></td>
-                                                <td class="subclub-desc">FIT - F-Klubbens IT-udvalg</td>
-                                                <td class="subclub-resp">person 1 (pers1@student.aau.dk)</td>
-                                            </tr>
-                                        </table>
-                                        <table>
-                                            <tr>
-                                                <td class="subclub-logo"><img class="subclub-logo-img subclub-logo-img-display" src="resources/initiv.svg"></td>
-                                                <td class="subclub-desc">Initiv - Festudvalget, står for diverse arrangementer og fester.</td>
-                                                <td class="subclub-resp">person 3 (pers3@student.aau.dk)</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="subclub-logo"><img class="subclub-logo-img subclub-logo-img-display" src="resources/flan.webp"></td>
-                                                <td class="subclub-desc">FLAN - F-Klubbens LAN udvalg.</td>
-                                                <td class="subclub-resp">person 4 (pers3@student.aau.dk)</td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                    <td class="info-cell" style="width: 20%;">
-                        <img class="club-logo" src="resources/adsl.png">
-                        <p>
-                            Hvem er vi? Ingen ved det - alle snakker om det<br>
-                            Kontaktperson: person 5 (pers5@student.aau.dk)
-                        </p>
-                    </td>
-                    <td class="info-cell" style="width: 20%;">
-                        <img class="club-logo" src="resources/fixd.png">
-                        <p>
-                            Studerende på Interaktionsdesign<br>
-                            Kontaktperson: person 6 (pers6@student.aau.dk)
-                        </p>
-                    </td>
-                </tr>
-            </table>
-        </footer>
-    </div>
+    <main>
+    </main>
+    <footer>
+        <article>
+            <img src="assets/flogo.svg">
+            <p>For tilmelding til F-klubben, henvend dig i Jægerstuen (Klynge 2) eller på fklub.dk</p>
+        </article>
+        <article>
+            <img src="assets/fit.svg">
+            <p>FIT - F-Klubbens IT-udvalg</p>
+            <p>person 1 (pers1@student.aau.dk)</p>
+        </article>
+        <article>
+            <img src="assets/initiv.svg">
+            <p>Initiv - Festudvalget, står for diverse arrangementer og fester.</p>
+            <p>person 3 (pers3@student.aau.dk)</p>
+        </article>
+        <article>
+            <img src="assets/flan.webp">
+            <p>FLAN - F-Klubbens LAN udvalg.</p>
+            <p>person 4 (pers3@student.aau.dk)</p>
+        </article>
+        <article>
+            <img src="assets/fkult.webp">
+            <p>FKult - F-Klubbens Kultur-udvalg</p>
+            <p>person 2 (pers2@student.aau.dk)</p>
+        </article>
+        <article>
+            <img src="assets/adsl.png">
+            <p>Hvem er vi? Ingen ved det - alle snakker om det</p>
+            <p>Kontaktperson: person 5 (pers5@student.aau.dk)</p>
+        </article>
+        <article>
+            <img src="assets/fixd.png">
+            <p>Studerende på Interaktionsdesign</p>
+            <p>Kontaktperson: person 6 (pers6@student.aau.dk)</p>
+        </article>
+    </footer>
+    <script src="calendar-populator.js"></script>
 </body>
 </html>
-
-<script src="calendar_populator.js"></script>
