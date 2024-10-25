@@ -4,8 +4,8 @@
     font-family: 'Arial';
 }
 body {
-    width: 420mm; /* Blaze it */
-    height: 297mm;
+    width: 100vw; /* Blaze it */
+    box-sizing: border-box;
 }
 main {
     display: flex;
@@ -27,7 +27,7 @@ main {
     text-align: center;
     padding: 0.25rem;
     text-transform: capitalize;
-    line-height: 1.1337; /* Magic number! 🪄✨ */
+    line-height: 1.1337; /* L33T magic number! 🪄✨ */
 }
 .month h3 {
     grid-column: 1 / 4;
@@ -83,4 +83,11 @@ footer article img {
 }
 footer article p:first-of-type {
     font-weight: 600;
+}
+
+@media print {
+    body {
+        width: 420mm; /* Blaze it */
+        height: 297mm;
+    }
 }
