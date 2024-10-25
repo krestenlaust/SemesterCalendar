@@ -104,5 +104,10 @@ footer article p:first-of-type {
     body {
         width: 420mm; /* Blaze it */
         height: 297mm;
+        background: lightgrey;
+    }
+    footer {
+        position: absolute;
+        bottom: 0;
     }
 }
