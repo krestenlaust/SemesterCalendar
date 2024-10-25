@@ -1,11 +1,11 @@
-const events = {
+const eventlist = {
     "2024-02-01": [{name: "=Semesterstart="}],
     "2024-03-22": [{name: "F-dag", logo: "initiv.svg"}],
     "2024-02-02": [{name: "Tour de Fredagsbar m. Topholt", logo: "flogo.svg"}],
     "2024-02-16": [{name: "Foobar m. Norlys Energy Trading", logo: "flogo.svg"}],
-    "2024-02-21": [{name: "‎ Brætspilsaften m. Prosa", logo: "adsl.png"}],
-    "2024-03-20": [{name: "‎ Brætspilsaften m. IT-day", logo: "adsl.png"}],
-    "2024-04-17": [{name: "‎ Brætspilsaften", logo: "adsl.png"}],
+    "2024-02-21": [{name: "Brætspilsaften m. Prosa", logo: "adsl.png"}],
+    "2024-03-20": [{name: "Brætspilsaften m. IT-day", logo: "adsl.png"}],
+    "2024-04-17": [{name: "Brætspilsaften", logo: "adsl.png"}],
 
     "2024-02-29": [{name: "Facking v5.0: Må den bedste editor VIMme", logo: "fit.svg"}],
     "2024-04-11": [{name: "Facking v5.5: Standard Issue", logo: "fit.svg"}],
@@ -41,136 +41,67 @@ const events = {
     "2024-05-03": [{name: "F-sportsdag", logo: "initiv.svg"}],
     "2024-05-29": [{name: "Projektafleverings deadline"}],
     "2024-05-31": [{name: "Universitetsfesten 2024 - 50 års jubilæum"}]
-}
-
-const resource_root = "resources/";
-
-const startMonth = 1; // February, 0-indexed.
+};
 const year = 2024;
+const months = [2,3,4,5,6];
+const options = {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  };
 
-/**
- * 
- * @param {HTMLTableElement} table_element
- */
-function populate_calendar(table_element) {
-    // Generate days in table
+const main = document.getElementsByTagName('main')[0];
+for (month of months) {
+    const monthElem = document.createElement('article');
+    monthElem.classList.add('month');
+    const day = new Date(year, month-1, 1);
+    const lastdate = new Date(year, month, 0);
+    const heading = document.createElement('h3');
+    heading.innerText = day.toLocaleDateString('da-DK', { month: 'long' });
+    monthElem.append(heading);
 
-    for (let i = 1; i <= 31; i++) {
-        table_element.appendChild(generate_table_row(i))
-    }
-}
+    while (day <= lastdate) {
+        const weekday = document.createElement('p');
+        weekday.innerText = day.toLocaleDateString('da-DK', { weekday: 'long' }).charAt(0);
 
-/**
- * 
- * @param {Number} dayIndex Index starting at 1.
- * @returns {HTMLTableRowElement}
- */
-function generate_table_row(dayIndex) {
-    const tablerowelem = document.createElement("tr");
+        const date = document.createElement('p');
+        date.innerText = day.getDate();
 
-    for (let i = 0; i < 5; i++) {
-        const tabledataelem = document.createElement("td");
+        const events = document.createElement('section');
+        events.innerText = ` `;
 
-        const currentDate = new Date(year, startMonth + i, dayIndex);
-        // If the date isn't correct, it's because it's wrapped into the next month.
-        if (currentDate.getDate() == dayIndex) {
-            tabledataelem.appendChild(generate_table_cell(currentDate));
+        if (isWeekend(day)) {
+            weekday.classList.add('weekend');
+            date.classList.add('weekend');
+            events.classList.add('weekend');
         }
-
-        tablerowelem.appendChild(tabledataelem);
+        populate(day, events);
+        monthElem.append(weekday, date, events);
+        day.setDate(day.getDate() + 1);
     }
-
-    return tablerowelem;
+    main.appendChild(monthElem);
 }
 
-/**
- * 
- * @param {Date} currentDate
- * @returns {HTMLTableElement}
- */
-function generate_table_cell(currentDate) {
-    const tableelem = document.createElement("table");
-    tableelem.className = "day";
-
-    const weekdayelem = document.createElement("td");
-    const weekday_index = currentDate.getDay();
-    weekdayelem.innerText = get_weekday_symbol(weekday_index);
-    weekdayelem.classList.add("day-weekday");
-
-    if (is_weekend(weekday_index)) {
-        tableelem.classList.add("day-weekend");
+function isWeekend(day) {
+    if ([0, 6].includes(day.getDay())) {
+        return true;
     }
-
-    tableelem.appendChild(weekdayelem);
-
-    const daynumberelem = document.createElement("td");
-    daynumberelem.innerText = currentDate.getDate();
-    daynumberelem.className = "day-daynumber";
-    tableelem.appendChild(daynumberelem);
-
-    // Add events
-    const date_elem = document.createElement("td");
-    date_elem.classList.add("day-events");
-
-    const eventsForDay = get_day_events(currentDate);
-    eventsForDay.forEach(event => {
-        const event_elem = document.createElement("div");
-        event_elem.classList.add("subclub-event");
-
-        if (event.hasOwnProperty("logo")){
-            const logo_elem = document.createElement("img");
-            logo_elem.classList.add("subclub-logo-img");
-            logo_elem.src = resource_root.split("/").concat(event.logo).join("/");
-            event_elem.appendChild(logo_elem);
-        }
-
-        const desc_elem = document.createElement("span");
-        desc_elem.innerText = event.name;
-        event_elem.appendChild(desc_elem);
-
-        date_elem.appendChild(event_elem);
-    });
-    tableelem.appendChild(date_elem);
-
-    return tableelem;
+    return false;
 }
 
-/**
- * 
- * @param {Date} date The date of the event.
- * @returns {Array}
- */
-function get_day_events(date) {
-    date.setDate(date.getDate() + 1); // Add one to the date because there's an off-by-one error somewhere.
-    const key = get_iso_date(date);
-    return events[key] || [];
-}
-
-/**
- * @param {Date} date
- * @returns {String} ISO-formatted date.
- */
-function get_iso_date(date) {
-    return date.toISOString().substring(0, 10);
-}
-
-/**
- * 
- * @param {Number} dayIndex Zero-indexed.
- * @returns {String} Symbol representing the weekday.
- */
-function get_weekday_symbol(dayIndex) {
-    const weekdays = ["S", "M", "T", "O", "T", "F", "L"];
-    return weekdays[dayIndex];
-}
-
-/**
- * 
- * @param {Number} dayIndex Zero-indexed. 
- * @returns {Boolean} Whether the day is part of the weekend.
- */
-function is_weekend(dayIndex) {
-    return dayIndex == 0 || dayIndex == 6;
-}
-
-populate_calendar(calendar)
+function populate(day, elem) {
+    const dayKey = day.toLocaleDateString('en-CA', options);
+    if (eventlist[dayKey]) {
+        eventlist[dayKey].forEach(activity => {
+            console.log(activity.name);
+            const activityItem = document.createElement('p');
+            activityItem.innerText = activity.name;
+            if (activity.logo) {
+                const logo = document.createElement('img');
+                logo.src = `/assets/${activity.logo}`;
+                elem.appendChild(logo);
+            }
+            elem.appendChild(activityItem);
+        });
+    }
+}   
