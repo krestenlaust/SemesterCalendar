@@ -39,7 +39,7 @@ main {
     text-transform: capitalize;
 }
 .weekend {
-    filter: brightness(0.9);
+    background-color: #eee;
 }
 .month > section {
     display: flex;
