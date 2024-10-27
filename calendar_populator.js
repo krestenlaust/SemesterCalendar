@@ -98,7 +98,7 @@ function populate(day, elem) {
             activityItem.innerText = activity.name;
             if (activity.logo) {
                 const logo = document.createElement('img');
-                logo.src = `/assets/${activity.logo}`;
+                logo.src = `assets/${activity.logo}`;
                 elem.appendChild(logo);
             }
             elem.appendChild(activityItem);
