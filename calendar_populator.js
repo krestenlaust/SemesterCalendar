@@ -1,49 +1,59 @@
 const eventlist = {
-    "2024-02-01": [{name: "=Semesterstart="}],
-    "2024-03-22": [{name: "F-dag", logo: "initiv.svg"}],
-    "2024-02-02": [{name: "Tour de Fredagsbar m. Topholt", logo: "flogo.svg"}],
-    "2024-02-16": [{name: "Foobar m. Norlys Energy Trading", logo: "flogo.svg"}],
-    "2024-02-21": [{name: "Brætspilsaften m. Prosa", logo: "adsl.png"}],
-    "2024-03-20": [{name: "Brætspilsaften m. IT-day", logo: "adsl.png"}],
-    "2024-04-17": [{name: "Brætspilsaften", logo: "adsl.png"}],
+    "2024-09-02": [{name: "=Semesterstart="}],
+    "2024-10-30": [{name: "Brætspilsaften", logo: "adsl.png"}],
+    "2024-11-27": [{name: "Brætspilsaften med Prosa", logo: "adsl.png"}],
+    "2024-10-02": [{name: "Brætspilsaften med Prosa", logo: "adsl.png"}],
+    "2024-10-23": [{name: "Generalforsamling 2024", logo: "adsl.png"}],
 
-    "2024-02-29": [{name: "Facking v5.0: Må den bedste editor VIMme", logo: "fit.svg"}],
-    "2024-04-11": [{name: "Facking v5.5: Standard Issue", logo: "fit.svg"}],
-    "2024-03-18": [{name: "=Kalenderen er opdateret="}],
-    "2024-04-22": [{name: "=Kalenderen opdateres="}],
-    "2024-02-26": [{name: "LaTeX kursus med Victor", logo: "fadase.jpg"}],
-    "2024-03-27": [{name: "AI og Graph databaser med supercomputere", logo: "asck.png"}],
-    "2024-04-10": [{name: "ConnectIT - Messe"}],
 
-    "2024-04-27": [{name: "Tema-fest", logo: "fixd.png"}],
-    "2024-02-08": [{name: "Filmafstemning", logo: "fkult.webp"}],
-    "2024-02-22": [{name: "Dice 'n Drinks", logo: "fixd.png"}, {name: "Hüttels favoritter", logo: "fkult.webp"}],
-    "2024-03-07": [{name: "Badaptations 2: Mediocre Boogaloo", logo: "fkult.webp"}],
-    "2024-03-21": [{name: "Donanering og dets konsekvenser", logo: "fkult.webp"}],
-    "2024-04-04": [{name: "Star Wars maraton, men Google har oversat den for mange gange", logo: "fkult.webp"}],
-    "2024-04-18": [{name: "Tim Currys campy syretrip i en spooky villa", logo: "fkult.webp"}],
-    "2024-05-02": [{name: "Weird indie gysere som indeholder virkelig mange mænd som laver...", logo: "fkult.webp"}],
-    "2024-05-16": [{name: "Retro-resurrektion og rollespil romantik", logo: "fkult.webp"}],
+    "2024-09-12": [{name: "Filmafstemning", logo: "fkult.webp"}],
+    "2024-09-13": [{name: "Foobar m. Medlemsindmelding", logo: "flogo.svg"}],
 
-    "2024-04-26": [{name: "Feaster", logo: "initiv.svg"}],
-    "2024-04-12": [{name: "FLAN 6765.0", logo: "flan.webp"}],
-    "2024-04-13": [{name: "FLAN 6765.0", logo: "flan.webp"}],
-    "2024-04-14": [{name: "FLAN 6765.0", logo: "flan.webp"}],
+    "2024-09-19": [{name: "Syretrip på begge sider af Stillehavet", logo: "fkult.webp"}],
+    "2024-09-20": [{name: "Generalforsamling 2024", logo: "flogo.svg"}],
+    "2024-09-27": [{name: "Foobar m. Coolshop", logo: "flogo.svg"}],
+    
+    "2024-10-10": [{name: "Giorgios Favoritter", logo: "fkult.webp"}],
+    "2024-10-11": [{name: "Farcrawl m. Topholt", logo: "flogo.svg"}],
 
-    "2024-03-29": [{name: "Create Jam Spring 2024", logo: "createjam.png"}],
-    "2024-03-30": [{name: "Create Jam Spring 2024", logo: "createjam.png"}],
-    "2024-03-31": [{name: "Create Jam Spring 2024", logo: "createjam.png"}],
+    "2024-10-17": [{name: "Klassikkere som ingen af jer har set", logo: "fkult.webp"}],
+    "2024-10-18": [{name: "Fyttetur 2024", logo: "flogo.svg"}],
+    "2024-10-19": [{name: "Fyttetur 2024", logo: "flogo.svg"}],
+    "2024-10-20": [{name: "Fyttetur 2024", logo: "flogo.svg"}],
+    "2024-10-21": [{name: "Fyttetur 2024", logo: "flogo.svg"}],
 
-    "2024-04-19": [{name: "Datalogi/DVML Hyttetur"}],
-    "2024-04-20": [{name: "Datalogi/DVML Hyttetur"}],
-    "2024-04-21": [{name: "Datalogi/DVML Hyttetur"}],
+    "2024-10-24": [{name: "Facking v6", logo: "fit.svg"}],
+    "2024-10-25": [{name: "FLAN 10946.0", logo: "flan.webp"}],
+    "2024-10-26": [{name: "FLAN 10946.0", logo: "flan.webp"}],
+    "2024-10-27": [{name: "FLAN 10946.0", logo: "flan.webp"}],
 
-    "2024-05-03": [{name: "F-sportsdag", logo: "initiv.svg"}],
-    "2024-05-29": [{name: "Projektafleverings deadline"}],
-    "2024-05-31": [{name: "Universitetsfesten 2024 - 50 års jubilæum"}]
+    "2024-10-31": [{name: "2000s summed up <3", logo: "fkult.webp"}],
+    "2024-11-01": [{name: "Fnugfald", logo: "flogo.svg"}],
+
+    "2024-11-06": [{name: "Åben TREO-forsamling", logo: "flogo.svg"}],
+    "2024-11-08": [{name: "F-dag", logo: "initiv.svg"}],
+
+    "2024-11-09": [{name: "", logo: "de-klubben.png"}],
+    // CreateJam
+    "2024-11-08": [{name: "Create Jam Fall 2024", logo: "createjam.png"}],
+    "2024-11-09": [{name: "DE-Klubben 25 års jubilæum / Create Jam Fall 2024", logo: ""}],
+    "2024-11-10": [{name: "Create Jam Fall 2024", logo: "createjam.png"}],
+
+    "2024-11-13": [{name: "Foret øver julesange", logo: "flogo.svg"}],
+    "2024-11-14": [{name: "The Building", logo: "fkult.webp"}],
+    "2024-11-15": [{name: "BIT LAN", logo: "bitlan2024.png"}],
+    "2024-11-16": [{name: "BIT LAN", logo: "bitlan2024.png"}],
+    "2024-11-17": [{name: "BIT LAN", logo: "bitlan2024.png"}],
+
+    "2024-11-22": [{name: "Fjulestue", logo: "initiv.svg"}],
+    "2024-11-28": [{name: "Over the top action comedy", logo: "fkult.webp"}],
+    "2024-12-06": [{name: "Fjulefrokost", logo: "initiv.svg"}],
+    "2024-12-12": [{name: "Julefilm", logo: "fkult.webp"}],
+
+    "2024-12-20": [{name: "=Projektafleverings deadline="}],
 };
 const year = 2024;
-const months = [2,3,4,5,6];
+const months = [9,10,11,12,1];
 const options = {
     year: 'numeric',
     month: '2-digit',
