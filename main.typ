@@ -159,18 +159,21 @@
         width: 100%,
         stroke: grid-stroke,
         inset: 0pt,
+        spacing: 0pt,
         {
             // Month heading
             block(
                 width: 100%,
                 fill: white-fill,
                 inset: (x: 4pt, y: 4pt),
-                stroke: (bottom: grid-stroke),
-                align(center + horizon)[#text(size: 18pt, weight: "bold", month-name(m))]
+                stroke: grid-stroke,
+                spacing: 0pt,
+                align(center + horizon)[#text(size: 32pt, weight: "bold", month-name(m))]
             )
             // Day rows
             grid(
                 columns: (col-wd, col-date, 1fr),
+                grid.hline(y: 0, stroke: grid-stroke),
                 ..rows.map(((wd, d, fill, evs)) => (
                     cell(
                         text(size: 12pt, weekday-letter(wd)),
@@ -195,29 +198,75 @@
  * FOOTER
  */
 
-#let render-footer() = {
+#let cool_cell(org) = {
+    block(
+        inset: 4pt,
+        width: 100%,
+        height: 100%,
+        fill: white-fill,
+        //stroke: grid-stroke,
+        {   
+            align(center + horizon, {
+              image(assets-path + org.logo, height: 86pt)
+              v(2pt)
+              if org.name != "" {
+                  text(size: 14pt, weight: "bold", org.name)
+                  linebreak()
+              }
+              if org.description != "" {
+                  text(size: 12pt, org.description)
+                  linebreak()
+              }
+              text(size: 10pt, style: "italic", org.contact)
+            })
+        }
+    )
+}
+
+
+#let cool_cell2(org) = {
+  align(horizon + center)[#grid(columns: 3, 
+        align(left + horizon)[#image(assets-path + org.logo, height: 48pt)],
+        h(2pt),
+        align(left + horizon, {
+              if org.name != "" {
+                  text(size: 14pt, weight: "bold", org.name)
+                  linebreak()
+              }
+              if org.description != "" {
+                  text(size: 12pt, org.description)
+                  linebreak()
+              }
+              text(size: 10pt, style: "italic", org.contact)
+          })
+        )]
+}
+
+#let render-footer(all_stuff: org-rows) = {
     grid(
-        columns: org-rows.map(_ => 1fr),
-        column-gutter: 3pt,
-        ..org-rows.map(org => {
-            block(
-                fill: white-fill,
-                inset: 4pt,
-                width: 100%,
-                stroke: grid-stroke,
-                {
-                    image(assets-path + org.logo, height: 28pt)
-                    v(2pt)
-                    if org.name != "" {
-                        text(size: 7pt, weight: "bold", org.name)
-                        linebreak()
-                    }
-                    if org.description != "" {
-                        text(size: 7pt, org.description)
-                        linebreak()
-                    }
-                    text(size: 6pt, style: "italic", org.contact)
-                }
+        columns: (200pt,200pt,200pt,200pt,200pt,200pt,200pt,200pt),
+        rows: (100pt, 100pt),
+        column-gutter: 0pt,
+        //stroke: grid-stroke,
+        grid.cell(
+            rowspan: 2,
+            cool_cell(all_stuff.at(0))
+        ),
+        grid.cell(colspan: 3, rowspan: 2,
+            grid(
+              columns: (200pt,200pt,200pt), 
+              rows: (100pt),
+              //stroke: grid-stroke,
+              ..all_stuff.slice(1,6).map(org => {
+                  cool_cell2(org)
+              }),
+            )
+        ),
+        ..all_stuff.slice(6).map(org => {
+            grid.cell(
+                rowspan: 2,
+                //stroke: grid-stroke,
+                cool_cell(org)
             )
         })
     )
@@ -230,7 +279,7 @@
 #set page(
     paper: "a2",
     flipped: true,
-    margin: 6mm,
+    margin: 12mm,
     //background: rect(width: 100%, height: 100%, fill: luma(255))
 )
 
@@ -239,7 +288,7 @@
 // Month grid — divide A2 width across all months
 #grid(
     columns: months.map(_ => 1fr),
-    column-gutter: 3pt,
+    column-gutter: 5pt,
     ..months.map(m => render-month(year, m))
 )
 
