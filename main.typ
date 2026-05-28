@@ -137,6 +137,7 @@
             for ev in evs {
                 box(
                     height: row-height - 2pt,
+                    width: row-height - 2pt,
                     baseline: 2pt,
                     image(assets-path + ev.logo, height: row-height - 4pt)
                 )
