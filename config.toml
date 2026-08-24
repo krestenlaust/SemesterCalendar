@@ -1,0 +1,8 @@
+[semester]
+year = 2026
+months = [2,3,4,5,6]
+
+[paths]
+events = "events.csv"
+orgs = "orgs.csv"
+assets = "assets/"
